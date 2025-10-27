@@ -50,5 +50,6 @@ print(f"Final bias = {b}")
 print(f"Final cost = {CostHistory[-1]}")
 
 plt.scatter(x[:, 0],y,c="red",label = "Actual")
-plt.scatter(x[:, 0],model(x,w,b), c="green", label="Predicted", marker="x")
+plt.scatter(x[:, 0],model(x,w,b), c="green", label="Predicted")
+plt.legend()
 plt.show()
