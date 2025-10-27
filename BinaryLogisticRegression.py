@@ -44,3 +44,15 @@ x_train_pred = predict(x_train,w,b)
 acc = accuracy_score(y_train,x_train_pred)
 print(f"{acc*100}%")
 
+#data
+plt.scatter(x_train[y_train==0,0],x_train[y_train==0,1],c="red",label="Loser")
+plt.scatter(x_train[y_train==1,0],x_train[y_train==1,1],c="green",label="winner")
+plt.legend()
+
+#Decision boundary
+xvals = np.array([x_train[:,0].min(), x_train[:,0].max()])
+yvals = - (w[0]/w[1]*xvals) - (b/w[1])
+plt.plot(xvals,yvals,c="black",label="Decision Boundary")
+
+
+plt.show()
